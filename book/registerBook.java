@@ -1,8 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class registerBook {
-
     int id;
     String title;
     String author;
@@ -15,27 +11,17 @@ public class registerBook {
         this.available = available;
     }
 
-
-    // temporary
-    public void showBooks(registerBook registerBooks) {
-        System.out.println(registerBooks.title + " - " + registerBooks.author + " - " + "avaible: " + registerBooks.available);
+    // vai nos ajudar a encontrar os livros
+    public String getTitle() {
+        return title;
     }
 
-
-
-    public static void main(String[] args) {
-
-        List<registerBook> registerBooksInTheLibrary = new ArrayList<>();
-        registerBooksInTheLibrary.add(new registerBook(1, "O hobbit", "J.R.R. Tolkien", true));
-
-        System.out.println(registerBooksInTheLibrary);
-
-
-        for (registerBook book : registerBooksInTheLibrary) {
-            book.showBooks(book);
-        }
-
-    
+    public String getAuthor() {
+        return author;
     }
 
+    @Override
+    public String toString() {
+        return "ID: " + id + " | Title: " + title + " | Author: " + author + " | Available: " + available;
+    }
 }
